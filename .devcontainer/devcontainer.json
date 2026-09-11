@@ -1,0 +1,34 @@
+{
+	"name": "domo-dev",
+    "image": "mcr.microsoft.com/vscode/devcontainers/python",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-python.debugpy",
+                "ms-python.vscode-python-envs",
+                "ms-python.black-formatter",
+                "ms-python.pylint",
+                "ms-python.isort"
+            ]
+        }
+    },
+    "containerEnv": {
+        "WWW_PORT": "0",
+        "SSL_PORT": "8443",
+        "TZ": "Europe/Amsterdam"
+    },
+    "runArgs": [
+		"--userns=keep-id:uid=1000,gid=1000"
+	   ],
+	"containerUser": "vscode",
+	"updateRemoteUserUID": true,
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": {
+        "install OS dependencies": "sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install -y curl unzip wget sudo cron libudev-dev libmosquitto1 libcurl4-gnutls-dev libusb-0.1",
+        "install Python dependencies": "python3 -m pip install --upgrade pip && pip install -r requirements.txt",
+        "install Domoticz": "bash install-domoticz.sh",
+        "alias ll": "echo alias ll=\\'ls -lav --group-directories-first\\' >> ~/.bash_aliases"
+	}
+}
