@@ -11,7 +11,7 @@ Next to that, having the ability to view or update records in the Domoticz datab
 
 This is my personal setup - it may not work "out of the box" for everyone - use this for inspiration not a working solution!
 
-[My Domoticz development container](https://github.com/addiejanssen/domo-development-container) has been setup with my personal preferences and in my "IT infrastructure":
+[My Domoticz development container](https://github.com/addiejanssen/domoticz-development-container) has been setup with my personal preferences and in my "IT infrastructure":
 
 - I run Windows 11 as the based operating system on my laptop.
   - I have installed [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/)
