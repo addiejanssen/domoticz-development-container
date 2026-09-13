@@ -1,2 +1,4 @@
-cd /workspaces/domo-dev/domoticz
-./domoticz -www 8080 -sslwww 0 -log /workspaces/domo-dev/domoticz/domoticz.log -data /workspaces/domo-dev/domoticz
+#! /bin/bash
+
+# Run domoticz without mDNS, MCP, and updates.
+cd $DOMOTICZ_DIR ; ./domoticz -www 8080 -sslwww 0 -nomcp -nomdns -noupdates -log $DOMOTICZ_DIR/domoticz.log -data $DOMOTICZ_DIR
