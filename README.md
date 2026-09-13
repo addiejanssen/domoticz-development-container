@@ -28,7 +28,7 @@ This is my personal setup - it may not work "out of the box" for everyone - use 
 
 Here are the 2 minute "getting up and running" steps that I use:
 
-- I download the contents of this repository to a folder on WSL and my development host (I use both of them for development - switching between them based on my mood/needs).
+- I download the contents of [this repository](https://github.com/addiejanssen/domoticz-development-container) to a folder on WSL and my development host (I use both of them for development - switching between them based on my mood/needs).
 - Then I open the folder in a new workspace in vscode; vscode should now offer me the option to re-open the folder in a dev container.
   - This will trigger a few installs and updates:
     - It will remove the `.gitignore` file and the `.git` folder and all its contents. I use this dev container folder as a template and I do not want to keep track of all the changes I make while using the dev container.
